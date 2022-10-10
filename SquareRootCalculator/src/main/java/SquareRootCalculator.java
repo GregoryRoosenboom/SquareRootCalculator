@@ -8,26 +8,16 @@ public class SquareRootCalculator {
         BigDecimal squareRootSquared = squareRoot;
 
         do {
-            squareRoot = squareRoot.add(BigDecimal.valueOf(1));
-            squareRootSquared = squareRoot.multiply(squareRoot);
-        }
-        while (number.compareTo(squareRootSquared) > 0);
-
-
-        if (squareRootSquared.compareTo(number) == 0) {
-            return squareRoot.toPlainString();
-        }
-
-        squareRoot = squareRoot.subtract(BigDecimal.ONE);
-        squareRootSquared = squareRoot.multiply(squareRoot);
-        do {
             squareRoot = squareRoot.add(decimal);
             squareRootSquared = squareRoot.multiply(squareRoot);
         }
         while (number.compareTo(squareRootSquared) > 0);
+
+
         if (squareRootSquared.compareTo(number) == 0) {
             return squareRoot.toPlainString();
         }
+
         return squareRoot.subtract(decimal).toPlainString();
     }
 }
