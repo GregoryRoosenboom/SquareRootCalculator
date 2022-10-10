@@ -12,4 +12,14 @@ public class SquareRootCalculatorTests {
     public void testForDecimalNumber(){
         Assert.assertEquals("0.50000", SquareRootCalculator.calculateSuareRoot("0.25"));
     }
+
+    @Test
+    public void testForZero(){
+        Assert.assertEquals("0.00000", SquareRootCalculator.calculateSuareRoot("0"));
+
+    }    @Test
+    public void testForOne(){
+        Assert.assertEquals("1.00000", SquareRootCalculator.calculateSuareRoot("1"));
+
+    }
 }
